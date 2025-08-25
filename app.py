@@ -2,14 +2,15 @@ import pygame as pg
 
 pg.init()
 
-screen = pg.display.set_mode((400,400)) # Define o tamanho da tela
-pg.display.set_caption('Meu primeiro jogo')
-pg.display.set_palette(('hhhhh'))
+largura = 600
+altura = 600
+tela = pg.display.set_mode((altura, largura))
+pg.display.set_caption('Olá, mundo!')
 
-running = True
-while running:
-    for event in pg.event.get(): # Evento pego
+rodar = True
+while rodar:
+    for event in pg.event.get():
         if event.type == pg.QUIT:
-            running = False
+            rodar = False
             
 pg.quit()
